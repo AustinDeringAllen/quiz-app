@@ -1,0 +1,18 @@
+// All things that I've used more than once
+// should be in here. Colors, etc.
+
+.hidden {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.correct {
+    border: 2px solid lightgreen;
+}
+
+.incorrect {
+    border: 2px solid lightcoral;
+}

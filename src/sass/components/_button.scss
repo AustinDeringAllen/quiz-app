@@ -1,0 +1,29 @@
+.btn {
+    border: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-start {
+    font-size: 8rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    background-color: #357da9;
+    color: white;
+    padding: 2rem;
+}
+
+//.btn-pagination
+
+.btn-page {
+    color: white;
+    padding: 1rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    background-color: #333;
+}

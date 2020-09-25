@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quizzle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <script type="module" src="index.js" async></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Quizzle</h1>
+        <div class="header__form">
+            <form class="form">
+                <div class="form__radio">
+                    <div class="radio__group" id="group-1">
+                        <input type="radio" value="any" class="radio__select" id="any" name="difficulty">
+                        <label for="any" class="radio__label">Any</label>
+                    </div>
+                    <div class="radio__group" id="group-2">
+                        <input type="radio" value="easy" class="radio__select" id="easy" name="difficulty">
+                        <label for="easy" class="radio__label">Easy</label>
+                    </div>
+                    <div class="radio__group" id="group-3">
+                        <input type="radio" value="medium" class="radio__select" id="medium" name="difficulty">
+                        <label for="medium" class="radio__label">Medium</label>
+                    </div>
+                    <div class="radio__group" id="group-4">
+                        <input type="radio" value="hard" class="radio__select" id="hard" name="difficulty">
+                        <label for="hard" class="radio__label">Hard</label>
+                    </div>
+                </div>
+                <select class="form__category">
+                    <option value="any">Any Category</option>
+                </select>
+                <input type="submit" name="submit" class="btn btn-start">
+            </form>
+        </div>
+    </header>
+
+    <div class="overlay hidden">
+        <input type="checkbox" class="overlay__checkbox" id="overlay-toggle">
+        <label for="overlay-toggle" class="overlay__button">
+            <span class="overlay__icon">1</span>
+        </label>
+
+        <button class="overlay__check btn btn-check">Check Answers</button>
+
+        <div class="overlay__background">&nbsp;</div>
+
+        <nav class="overlay__nav">
+            <!-- <div class="nav__group">
+                <div class="nav__background">
+                    <h4 class="nav__label">Q2</h4>
+                </div>
+            </div> -->
+        </nav>
+    </div>
+
+    <main class="quiz hidden">
+        <div class="question">
+            <h2 class="question__title">
+                <!-- In "One Piece", who confirms the existence of the legendary treasure, One Piece?  -->
+            </h2>
+        </div>
+        <ul class="answers">
+            <!-- <li class="answer">
+                <input type="radio" class="answer__select" id="option-1" name="question-1">
+                <div class="answer__container">
+                    <label for="option-1" class="answer__label">
+                        <span class="answer__label-letter">A.</span>
+                        <span class="answer__label-title">Edward "Whitebeard" Newgate</span>
+                    </label>
+                </div>
+            </li>
+            <li class="answer">
+                <input type="radio" class="answer__select" id="option-2" name="question-1">
+                <div class="answer__container">
+                    <label for="option-2" class="answer__label">
+                        <span class="answer__label-letter">B.</span>
+                        <span class="answer__label-title">Former Marine Fleet Admiral Sengoku</span>
+                    </label>
+                </div>
+            </li>
+            <li class="answer">
+                <input type="radio" class="answer__select" id="option-3" name="question-1">
+                <div class="answer__container">
+                    <label for="option-3" class="answer__label">
+                        <span class="answer__label-letter">C.</span>
+                        <span class="answer__label-title">Pirate King Gol D Roger</span>
+                    </label>
+                </div>
+            </li>
+            <li class="answer">
+                <input type="radio" class="answer__select" id="option-4" name="question-1"x>
+                <div class="answer__container">
+                    <label for="option-4" class="answer__label">
+                        <span class="answer__label-letter">D.</span>
+                        <span class="answer__label-title">Silvers Rayleigh</span>
+                    </label>
+                </div>
+            </li> -->
+        </ul>
+        <div class="pagination">
+            <button class="btn btn-page btn-page--prev">Prev</button>
+            <button class="btn btn-page btn-page--next">Next</button>
+        </div>
+    </main>
+</body>
+</html>

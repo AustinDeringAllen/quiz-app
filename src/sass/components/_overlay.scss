@@ -1,0 +1,118 @@
+.overlay {
+    height: 0;
+    transition: all .2s ease;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        width: 7rem;
+        height: 7rem;
+        font-size: 3.5rem;
+        border-radius: 50%;
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 1rem 3rem rgba(#000, .2);
+        cursor: pointer;
+        z-index: 200;
+        position: fixed;
+        top: 10rem;
+        right: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__background {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: #179ab7;
+        position: fixed;
+        top: 10.5rem;
+        right: 5.5rem;
+        transition: transform .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &__check {
+        opacity: 0;
+        width: 7rem;
+        height: 7rem;
+        font-size: 1.3rem;
+        border-radius: 50%;
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 1rem 3rem rgba(#000, .2);
+        z-index: 200;
+        position: fixed;
+        top: 20rem;
+        right: 5rem;
+    }
+
+    &__nav {
+        margin: 0 auto;
+        padding-top: 12rem;
+        display: grid;
+        grid-template-columns: repeat(10,max-content);
+        grid-template-rows: repeat(5,min-content);
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 1.5rem;
+        justify-content: center;
+        transition: all .1s;
+        opacity: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 70%;
+        visibility: initial;
+    }
+
+    &__checkbox:checked ~ &__button {
+        border: 3px solid white;
+    }
+
+    &__checkbox:checked ~ &__check {
+        opacity: 1;
+    }
+
+    &--on &__background {
+        transform: scale(80);
+    }
+}
+
+.nav {
+
+    &__select {
+        position: absolute;
+        display: none;
+    }
+
+    &__background {
+        border-radius: 2rem;
+        padding: 1rem;
+        display: block;
+    }
+    
+    &__label {
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__group {
+        z-index: 300;
+        justify-self: center;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+}

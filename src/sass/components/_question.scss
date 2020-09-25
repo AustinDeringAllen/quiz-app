@@ -1,0 +1,96 @@
+// How the question box should look, also how it should look
+// when active. &--active
+
+
+.question {
+    padding: 2rem 3rem;
+    margin: 0 auto;
+    &__title {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+}
+
+.answers {
+    padding: 2rem 5rem;
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-rows: repat(4, min-content);
+    grid-row-gap: 1rem;
+    //border: 1px solid black;
+}
+
+.answer {
+    width: 100%;
+    &__select {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    &__container {
+        color: #fff;
+        border-radius: 2rem;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 1rem 3rem rgba(#000, .1);
+        }
+    }
+
+    &__label {
+        color: #fff;
+        font-size: 2.6rem;
+        display: grid;
+        padding-right: 2rem;
+        grid-template-columns: min-content 1fr;
+        grid-column-gap: 1rem;
+        border-radius: 2rem;
+        cursor: pointer;
+
+        &-letter {
+            align-self: center;
+            justify-self: center;
+            height: 100%;
+            padding: 0 2rem 0 3rem;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+            transition: all .2s ease;
+        }
+    }
+
+    &:nth-of-type(1) &__container { background-color: #ee5d5e; }
+    &:nth-of-type(1) > &__select:checked ~ &__container .answer__label-letter,
+    &:nth-of-type(1):hover &__label-letter {
+        color: #ee5d5e;
+        background-color: #333;
+    }
+    &:nth-of-type(2) &__container { background-color: #3593a9; }
+    &:nth-of-type(2) > &__select:checked ~ &__container .answer__label-letter,
+    &:nth-of-type(2):hover &__label-letter {
+        color: #3593a9;
+        background-color: #333;
+    }
+    &:nth-of-type(3) &__container { background-color: #4cd793; }
+    &:nth-of-type(3) > &__select:checked ~ &__container .answer__label-letter,
+    &:nth-of-type(3):hover &__label-letter {
+        color: #4cd793;
+        background-color: #333;
+    }
+    &:nth-of-type(4) &__container { background-color: #efaf23; }
+    &:nth-of-type(4) > &__select:checked ~ &__container .answer__label-letter,
+    &:nth-of-type(4):hover &__label-letter {
+        color: #efaf23;
+        background-color: #333;
+    }
+}
+
+.pagination {
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+
+    display: flex;
+    justify-content: space-around;
+}

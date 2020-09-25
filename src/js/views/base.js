@@ -1,0 +1,20 @@
+export const elements = {
+    header: document.querySelector('.header'),
+    title: document.querySelector('.header__title'),
+    form: document.querySelector('.header__form'),
+    difficulties: document.querySelector('.form__radio'),
+    categories: document.querySelector('.form__category'),
+    overlay: document.querySelector('.overlay'),
+    overlayIcon: document.querySelector('.overlay__icon'),
+    overlayCheck: document.querySelector('.overlay__checkbox'),
+    quiz: document.querySelector('.quiz'),
+    question: document.querySelector('.question__title'),
+    answers: document.querySelector('.answers'),
+    nav: document.querySelector('.overlay__nav'),
+    checkAnswer: document.querySelector('.overlay__check'),
+    qCard: document.querySelectorAll('.nav__group'),
+    qCardLabel: document.querySelectorAll('.nav__label'),
+    pagination: document.querySelector('.pagination'),
+    pagePrev: document.querySelector('.btn-page--prev'),
+    pageNext: document.querySelector('.btn-page--next')
+};

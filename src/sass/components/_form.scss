@@ -1,0 +1,63 @@
+// The layout and style of the form will be in here.
+
+.form {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-row-gap: 2rem;
+
+    &__radio {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 2rem;
+    }
+
+    &__category {
+        font-size: 2rem;
+        border-radius: 5px;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.radio {
+    &__select {
+        position: absolute;
+        display: none;
+    }
+
+    &__label {
+        font-size: 2rem;
+        color: #fff;
+        padding: 1rem;
+        border: 2px solid #fff;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+
+    &__group {
+        &:nth-of-type(1) .radio__select:checked ~ .radio__label,
+        &:nth-of-type(1) .radio__label:hover {
+            color: #70a5ff;
+            border-color: currentColor;
+        }
+
+        &:nth-of-type(2) .radio__select:checked ~ .radio__label,
+        &:nth-of-type(2) .radio__label:hover {
+            color: #2cba3d;
+            border-color: currentColor;
+        }
+        &:nth-of-type(3) .radio__select:checked ~ .radio__label,
+        &:nth-of-type(3) .radio__label:hover {
+            color: #e08c16;
+            border-color: currentColor;
+        }
+        &:nth-of-type(4) .radio__select:checked ~ .radio__label,
+        &:nth-of-type(4) .radio__label:hover {
+            color: #dd2a2a;
+            border-color: currentColor;
+        }
+    }
+}
